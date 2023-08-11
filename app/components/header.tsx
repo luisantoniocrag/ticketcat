@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { signIn, signOut, useSession } from "next-auth/react"
-import styles from "./header.module.css"
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/20/solid"
+import { TicketcatLogoHorizontal } from "./svg"
 
 // The approach used in this component shows how to build a sign in and sign out
 // component that works on pages which support both client and server side
@@ -18,7 +18,11 @@ export default function Header() {
   return (
     <header className="w-screen flex justify-between px-8 py-4">
       <div id="title">
-        <h3>Ticketcat</h3>
+        <div className="w-8 h-8">
+          <Link href="/">
+            <TicketcatLogoHorizontal />
+          </Link>
+        </div>
       </div>
       <div>
         <div
